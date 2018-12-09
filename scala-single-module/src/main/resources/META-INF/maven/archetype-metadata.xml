@@ -1,0 +1,39 @@
+<archetype-descriptor
+        xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd"
+        name="spark-template">
+    <requiredProperties>
+        <requiredProperty key='artifactId'>
+            <defaultValue>test</defaultValue>
+        </requiredProperty>
+        <requiredProperty key='version'>
+            <defaultValue>1.0</defaultValue>
+        </requiredProperty>
+    </requiredProperties>
+
+    <fileSets>
+        <fileSet filtered='false' packaged='false' encoding='utf-8' >
+            <directory/>
+            <includes>
+                <include>scalastyle-config.xml</include>
+                <include>bootstrap.sh</include>
+            </includes>
+            <excludes/>
+        </fileSet>
+        <fileSet filtered='false' packaged='false' encoding='UTF-8' >
+            <directory>src/main/assembly</directory>
+            <includes>
+                <include>assembly.xml</include>
+            </includes>
+            <excludes/>
+        </fileSet>
+        <fileSet filtered='false' packaged='false' encoding='UTF-8'>
+            <directory>conf</directory>
+            <includes>
+                <include>log4j.properties</include>
+            </includes>
+            <excludes/>
+        </fileSet>
+    </fileSets>
+</archetype-descriptor>
